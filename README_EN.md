@@ -204,8 +204,10 @@ Or using **uv**:
 Tested and compatible with major LLMs: MiniMax-M2.5/2.7, doubao-seed-2.0-pro, Kimi k2.5, etc.
 
 ## Known Bugs (Will Not Fix)
-🐛 Bug #1: Empty header values cause errors (native HackRequests.py bug)
-🐛 Bug #2: Chunked Transfer-Encoding not supported
+🐛 Bug #1: Empty header values cause errors (native HackRequests.py bug) 
+
+🐛 Bug #2: Chunked Transfer-Encoding not supported 
+
 
 ## Usage
 ![Usage](assets/image1.png)
