@@ -38,7 +38,6 @@
 | `strip_html` | boolean | true | 去除响应中的 HTML 标签 |
 | `allow_custom_host` | boolean | false | 允许自定义 Host 头 |
 | `allow_custom_content_length` | boolean | false | 允许自定义 Content-Length |
-| `files` | array | - | ⚠️ 推荐使用：文件上传，自动构建正确的 multipart/form-data 格式 |
 
 **原始请求报文格式：**
 ```
@@ -80,17 +79,6 @@ http_send_request(
     strip_html=False
 )
 
-# 5. 文件上传（multipart/form-data）
-# 注意：content 只需要基本的请求行和 Host，不需要包含 multipart 内容
-http_send_request(
-    content="POST /upload HTTP/1.1\r\nHost: example.com\r\n\r\n",
-    baseurl="https://example.com",
-    files=[
-        {"name": "file", "filename": "test.txt", "content": "hello world", "content_type": "text/plain"},
-        {"name": "submit", "content": "upload"}  # 普通字段不需要 filename
-    ]
-)
-```
 
 **注意：** 当使用 `allow_custom_host=True` 时：
 - `baseurl` 指定实际连接的服务器

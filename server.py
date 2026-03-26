@@ -166,8 +166,8 @@ def http_send_request(
     timeout: int = 30,
     strip_html: bool = True,
     allow_custom_host: bool = False,
-    allow_custom_content_length: bool = False,
-    files: list = None
+    allow_custom_content_length: bool = False
+    # files: list = None
 ) -> dict:
     """
     Send HTTP/1.1 requests with raw packet support (HTTP/2 not supported).
@@ -223,16 +223,16 @@ def http_send_request(
         parsed_request = HTTPRequestParser.parse(content)
 
         # 处理文件上传
-        if files:
-            # 构建 multipart body
-            body, content_type, content_length = build_multipart_body(files)
-            # 覆盖原始 body
-            parsed_request.body = body
-            # 移除原有的 Content-Type（会被自动覆盖）
-            parsed_request.headers.pop('Content-Type', None)
-            # 设置新的 Content-Type
-            parsed_request.headers['Content-Type'] = content_type
-            # HackRequests会自动计算Content-Length
+        # if files:
+        #     # 构建 multipart body
+        #     body, content_type, content_length = build_multipart_body(files)
+        #     # 覆盖原始 body
+        #     parsed_request.body = body
+        #     # 移除原有的 Content-Type（会被自动覆盖）
+        #     parsed_request.headers.pop('Content-Type', None)
+        #     # 设置新的 Content-Type
+        #     parsed_request.headers['Content-Type'] = content_type
+        #     # HackRequests会自动计算Content-Length
 
         # baseurl 可以是简单的 "https" 或完整的 "https://a.com"
         # 如果包含 host，则使用其中的 host 作为实际连接地址
