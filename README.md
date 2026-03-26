@@ -214,7 +214,7 @@ PYTHONPATH=. python3 http_mcp/test_mcp.py
 | UTF-8 中文字符               | ✅ 正常 |
 | HTTP-MCP/1.0 默认 User-Agent | ✅ 正常 |
 
-MiniMax-M2.5/2.7、doubao-seed-2.0-pro、Kimi k2.5等主流大模型经测试均可正确调用。
+MiniMax-M2.5/2.7、doubao-seed-2.0-pro、Kimi k2.5等主流大模型经测试均可正确调用✅。
 
 **已知Bug（但暂不打算修复）**
 🐛 Bug #1: 空 Header 值报错 （HackRequests.py原生bug）
