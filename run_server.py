@@ -6,10 +6,10 @@ import os
 import sys
 
 # Add project to path
-sys.path.insert(0, 'your project path')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Set up environment
-os.environ['PYTHONPATH'] = '.'
+# os.environ['PYTHONPATH'] = '.'
 os.environ['HTTP_PROXY'] = 'http://127.0.0.1:8080'
 
 # Import and run server
