@@ -195,6 +195,36 @@ PYTHONPATH=. python3 http_mcp/test_mcp.py
 }
 ```
 
+## 测试
+| 测试项                       | 状态   |
+| ---------------------------- | ------ |
+| GET 请求                     | ✅ 正常 |
+| POST JSON                    | ✅ 正常 |
+| POST form-urlencoded         | ✅ 正常 |
+| 自定义 Header                | ✅ 正常 |
+| 状态码 200/404/500           | ✅ 正常 |
+| 延迟响应 (delay/N)           | ✅ 正常 |
+| PUT/PATCH/DELETE             | ✅ 正常 |
+| OPTIONS 请求                 | ✅ 正常 |
+| Query String 参数            | ✅ 正常 |
+| 重定向响应 (不跟随)          | ✅ 正常 |
+| 空 Body POST                 | ✅ 正常 |
+| UTF-8 中文字符               | ✅ 正常 |
+| HTTP-MCP/1.0 默认 User-Agent | ✅ 正常 |
+
+MiniMax-M2.5/2.7、doubao-seed-2.0-pro、Kimi k2.5等主流大模型经测试均可正确调用。
+
+**已知Bug（但暂不打算修复）**
+🐛 Bug #1: 空 Header 值报错 （HackRequests.py原生bug）
+🐛 Bug #2: Chunked Transfer-Encoding 不支持
+
+
+## 食用方法
+![alt text](assets/image1.png)
+
+## 效果演示
+![alt text](assets/image.png)
+
 
 ## 安全最佳实践
 1. 生产环境务必修改默认安全配置：
