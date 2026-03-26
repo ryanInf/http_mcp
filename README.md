@@ -6,6 +6,8 @@
 
 适用于Web渗透测试、调试。
 
+[README_EN](README_EN.md)
+
 ## 功能特性
 
 - 支持 HTTP/1.1 协议（暂不支持HTTP/2）
