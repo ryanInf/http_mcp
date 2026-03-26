@@ -1,0 +1,18 @@
+{
+  "security": {
+    "allowed_domains": ["*"],
+    "blocked_domains": [],
+    "allow_private_ips": true,
+    "allow_http": true,
+    "max_request_size": 10485760,
+    "max_response_size": 52428800,
+    "timeout": 30,
+    "verify_ssl": false,
+    "allowed_methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
+  },
+  "http": {
+    "follow_redirects": false,
+    "http2": false,
+    "http_proxy": ""
+  }
+}
