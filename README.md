@@ -30,7 +30,7 @@
 
 | 参数 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
-| `content` | string | 必需 | 原始 HTTP 请求报文（换行使用 `\r\n`）|
+| `content` | string | 必需 | 原始 HTTP 请求报文|
 | `baseurl` | string | 必需 | 完整 URL，如 `https://example.com` |
 | `timeout` | number | 30 | 超时时间（秒） |
 | `strip_html` | boolean | true | 去除响应中的 HTML 标签 |
@@ -40,15 +40,14 @@
 
 **原始请求报文格式：**
 ```
-POST /api/users HTTP/1.1\r\n
-Host: example.com\r\n
-Content-Type: application/json\r\n
-User-Agent: Mozilla/5.0\r\n
-\r\n
+POST /api/users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+User-Agent: Mozilla/5.0
+
 {"name": "test", "value": 123}
 ```
 
-> 注意：换行必须使用 `\r\n`（CRLF），不能只使用 `\n`
 
 **使用示例：**
 
